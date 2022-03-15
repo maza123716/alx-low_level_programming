@@ -7,12 +7,10 @@
  */
 void print_alphabet(void)
 {
-  int ch;
-   clrscr();
-  for (ch= ‘a’; ch<= ‘z’; ch++)
-
-                  _putchar(ch);
-
-                  _putchar (‘\n’) ;
+  for(int x = 'A'; x <= 'Z'; x++)
+  {
+    int lower_x = tolower(x);
+    _putchar(lower_x);
+    _putchar (‘\n’) ;
+  }
 }
-  
