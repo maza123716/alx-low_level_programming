@@ -48,6 +48,3 @@ void print_times_table(int n)
 		}
 	}
 }
-© 2022 GitHub, Inc.
-Terms
-Privacy
