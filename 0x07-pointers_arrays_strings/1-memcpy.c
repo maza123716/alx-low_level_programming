@@ -20,6 +20,3 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 
 	return (dest);
 }
-© 2022 GitHub, Inc.
-Terms
-Privacy
