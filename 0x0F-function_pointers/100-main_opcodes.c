@@ -1,45 +1,37 @@
-#include <stdio.h>
-#include <stdlib.h>
-
+#include<stdio.h>
+#include<stdlib.h>
 /**
- * main - prints the opcodes of itself
- * @argc: the number of args
- * @argv: arg vector
- * Return: Always 0
- */
+ * main- Entry point
+(* a blank line
+ *@argc: the number of parameters.
+ *@argv: the parameeters in the case the number ob bytes.
+* Description: this program prints opcodes in hexa)?
+* Return: 0 in succes
+*/
 int main(int argc, char *argv[])
 {
-  int bytes, index;
-  int (*address)(int, char **) = main;
-  unsigned char opcode;
+	int i, n;
 
-  if (argc != 2)
-    {
-      printf("Error\n");
-      exit(1);
-    }
 
-  bytes = atoi(argv[1]);
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	n = atoi(argv[1]);
+	if (n < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
 
-  if (bytes < 0)
-    {
-      printf("Error\n");
-      exit(2);
-    }
-
-  for (index = 0; index < bytes; index++)
-    {
-      opcode = *(unsigned char *)address;
-      printf("%.2x", opcode);
-
-      if (index == bytes - 1)
-	continue;
-      printf(" ");
-
-      address++;
-    }
-
-  printf("\n");
-
-  return (0);
+	for (i = 0; i < n; i++)
+	{
+		printf("%02hhx", *((char *)main + i));
+		if (i < n - 1)
+			printf(" ");
+		else
+			printf("\n");
+	}
+	return (0);
 }
